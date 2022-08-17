@@ -12,30 +12,19 @@ var writer *bufio.Writer = bufio.NewWriter(os.Stdout)
 func printf(f string, a ...interface{}) { fmt.Fprintf(writer, f, a...) }
 func scanf(f string, a ...interface{})  { fmt.Fscanf(reader, f, a...) }
 
-// ^ template
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
 
-func lengthOfLongestSubstring(s string) int {
-	flag := map[rune]bool{}
-	max := 0
-	count := 0
+func longestUnivaluePath(root *TreeNode) int {
 
-	for _, c := range s {
-		if flag[c] {
-			if count > max {
-				max = count
-			}
-
-			count = 0
-		} else {
-			count++
-		}
-	}
-
-	return 0
+	return 69
 }
 
 func main() {
 	defer writer.Flush()
 
-	printf("%d", lengthOfLongestSubstring("abcabcbb"))
+	printf("%d", longestUnivaluePath(&TreeNode{}))
 }
