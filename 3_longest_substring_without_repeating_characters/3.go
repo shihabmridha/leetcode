@@ -1,6 +1,6 @@
-package longest_substring_without_repeating_characters
+package solution
 
-func lengthOfLongestSubstring(s string) int {
+func LengthOfLongestSubstring(s string) int {
 	flag := map[rune]bool{}
 	max := 0
 	count := 0
