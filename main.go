@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	solution "shihabmridha/leetcode/3_longest_substring_without_repeating_characters"
+	solution "shihabmridha/leetcode/12_integer_to_roman"
 )
 
 // var reader *bufio.Reader = bufio.NewReader(os.Stdin)
@@ -17,7 +17,7 @@ func printf(f string, a ...interface{}) { fmt.Fprintf(writer, f, a...) }
 func main() {
 	defer writer.Flush()
 
-	x := solution.LengthOfLongestSubstring("1324")
+	x := solution.IntToRoman(1994)
 
-	printf("%d\n", x)
+	printf("%s\n", x)
 }
