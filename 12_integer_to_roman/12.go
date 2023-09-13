@@ -1,6 +1,6 @@
-package solution
+package integertoroman
 
-func IntToRoman(num int) string {
+func intToRoman(num int) string {
 	roman := ""
 
 	for num > 0 {

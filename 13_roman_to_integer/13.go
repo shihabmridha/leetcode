@@ -1,6 +1,6 @@
-package solution
+package romantointeger
 
-func RomanToInt(s string) int {
+func romanToInt(s string) int {
 	m := make(map[string]int)
 
 	m["O"] = 0

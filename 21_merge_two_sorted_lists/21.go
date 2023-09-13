@@ -1,4 +1,4 @@
-package solution
+package mergetwosortedlists
 
 import "sort"
 
@@ -7,7 +7,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func MergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
+func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 	list := []int{}
 
 	for list1 != nil {

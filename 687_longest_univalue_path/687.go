@@ -1,4 +1,4 @@
-package solution
+package longestunivaluepath
 
 type TreeNode struct {
 	Val   int
@@ -16,7 +16,11 @@ func solution(node *TreeNode, value int) int {
 	left := solution(node.Left, node.Val)
 	right := solution(node.Right, node.Val)
 
-	var nodeValue = left + right
+	var nodeValue = left
+
+	if right > nodeValue {
+		nodeValue = right
+	}
 
 	if nodeValue > result {
 		result = nodeValue
@@ -35,7 +39,7 @@ func solution(node *TreeNode, value int) int {
 	return nodeValue
 }
 
-func LongestUnivaluePath(root *TreeNode) int {
+func longestUnivaluePath(root *TreeNode) int {
 	result = 0
 
 	solution(root, -9999)
