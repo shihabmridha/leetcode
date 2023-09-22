@@ -1,37 +1,39 @@
 package productofarrayexceptself
 
-func abs(a int) int {
-	if a < 0 {
-		a = a * -1
-	}
-
-	return a
-}
-
 func productExceptSelf(nums []int) []int {
-	preMult := []int{}
-	sufMult := []int{}
-	res := []int{}
-
-	prev := 1
 	ln := len(nums)
 
+	preMult := make([]int, ln)
+	sufMult := make([]int, ln)
+	res := make([]int, ln)
+
+	prev1 := 1
+	prev2 := 1
+
 	for i := 0; i < ln; i++ {
-		if nums[i] != 0 {
+		preMult[i] = prev1 * nums[i]
+		prev1 = preMult[i]
 
-			preMult = append(preMult, abs(prev*nums[i]))
-		}
-
-		if nums[ln-(1+i)] != 0 {
-			sufMult = append(sufMult, abs(prev*nums[ln-(1+i)]))
-		}
+		sufMult[ln-(1+i)] = prev2 * nums[ln-(1+i)]
+		prev2 = sufMult[ln-(1+i)]
 	}
 
-	// for i := 0; i < ln; i++ {
-	//     if
-	// }
+	for i := 0; i < ln; i++ {
+		a := 1
+		b := 1
 
-	return []int{}
+		if i != 0 {
+			a = preMult[i-1]
+		}
+
+		if i+1 < ln {
+			b = sufMult[i+1]
+		}
+
+		res[i] = a * b
+	}
+
+	return res
 }
 
 // [1, 1, 0, 3, 3]			[1,  2,  3,  4]
