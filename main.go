@@ -23,7 +23,7 @@ func getDirName(problemName string) string {
 func main() {
 	// defer writer.Flush()
 
-	problem := "238. Product of Array Except Self"
+	problem := "153. Find Minimum in Rotated Sorted Array"
 
 	dirName := getDirName(problem)
 
