@@ -23,7 +23,7 @@ func getDirName(problemName string) string {
 func main() {
 	// defer writer.Flush()
 
-	problem := "36. Valid Sudoku"
+	problem := "125. Valid Palindrome"
 
 	dirName := getDirName(problem)
 
