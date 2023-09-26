@@ -15,6 +15,7 @@ import (
 func getDirName(problemName string) string {
 	str := strings.ToLower(problemName)
 	str = strings.ReplaceAll(str, ".", "")
+	str = strings.ReplaceAll(str, "-", "_")
 	str = strings.ReplaceAll(str, " ", "_")
 
 	return str
@@ -23,7 +24,7 @@ func getDirName(problemName string) string {
 func main() {
 	// defer writer.Flush()
 
-	problem := "14. Longest Common Prefix"
+	problem := "559. Maximum Depth of N-ary Tree"
 
 	dirName := getDirName(problem)
 
