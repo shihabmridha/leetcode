@@ -24,7 +24,7 @@ func getDirName(problemName string) string {
 func main() {
 	// defer writer.Flush()
 
-	problem := "559. Maximum Depth of N-ary Tree"
+	problem := "1046. Last Stone Weight"
 
 	dirName := getDirName(problem)
 
