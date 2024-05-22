@@ -24,7 +24,7 @@ func getDirName(problemName string) string {
 func main() {
 	// defer writer.Flush()
 
-	problem := "1046. Last Stone Weight"
+	problem := "136. Single Number"
 
 	dirName := getDirName(problem)
 

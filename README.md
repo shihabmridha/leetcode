@@ -26,3 +26,7 @@ I create a new directory with the problem number and problem name using the foll
 
 ### Helpers
 - Use `%v` to print array. Example: `fmt.Printf("%v", projects)`
+- Create empty map `make(map[int]int)`, `map[rune]bool{}`
+- Create empty rune `make([]rune, 5) // with size`, `map[rune]bool{}`
+- Sort list/slice `slices.Sort(mySlice)`.
+- Sort with comparer `sort.Slice(mySlice, func(i, j int) bool { return mySlice[i] > mySlice[j] })`
